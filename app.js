@@ -9,4 +9,4 @@ app.get('/:id/:type', function(req, res){
    res.send(req.params.id + " " + req.params.type);
 });
 
-//app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);
