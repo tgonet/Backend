@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+app.use("/movies", require('./movies.js'));
+
 
 //Simple request time logger
 app.use(function(req, res, next){
