@@ -1,8 +1,18 @@
 var express = require('express');
+const Sequelize = require("sequelize");
+const db = require("./db");
 var app = express();
 
-app.use("/movies", require('./movies.js'));
 
+db.authenticate().then(() => {
+   // sync
+   db.sync({alter: true})
+   .then(() => {
+       console.log("db successfully connected");
+   });
+});
+
+app.use("/movies", require('./movies.js'));
 
 //Simple request time logger
 app.use(function(req, res, next){
