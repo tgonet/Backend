@@ -13,6 +13,7 @@ db.authenticate().then(() => {
 });
 
 app.use("/student", require('./student.js'));
+app.use("/class", require('./class.js'));
 
 //Simple request time logger
 app.use(function(req, res, next){
