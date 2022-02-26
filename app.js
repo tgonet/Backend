@@ -1,6 +1,6 @@
 var express = require('express');
 const Sequelize = require("sequelize");
-const db = require("./db.js");
+const db = require("./db");
 var app = express();
 
 

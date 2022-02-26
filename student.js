@@ -1,5 +1,5 @@
 var express = require('express');
-const Student = require("./models/student.js");
+const Student = require("./models/student");
 var router = express.Router();
 
 router.get('/', function(req, res){
