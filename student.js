@@ -10,7 +10,7 @@ router.post('/', function(req, res){
 });
 
 router.get('/all', function(req, res){
-   Student.findAll.then(student => {
+   Student.findAll().then(student => {
       res.json(student);
    })
 });
