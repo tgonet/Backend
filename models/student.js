@@ -7,5 +7,4 @@ module.exports = db.define("student", {
     age: {type: sequelize.STRING},
     gender: {type: sequelize.STRING},
     class: {type: sequelize.INTEGER},
-    }, {
-});
+    });
