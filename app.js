@@ -12,7 +12,7 @@ db.authenticate().then(() => {
    });
 });
 
-app.use("/movies", require('./movies.js'));
+app.use("/student", require('./student.js'));
 
 //Simple request time logger
 app.use(function(req, res, next){
