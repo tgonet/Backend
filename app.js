@@ -1,5 +1,6 @@
 var express = require('express');
 const Sequelize = require("sequelize");
+const uuid = require("uuid");
 const db = require("./db");
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function(req, res){
+   console.log(uuid.v4());
    res.send("Hello world!");
 });
 
