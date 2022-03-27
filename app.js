@@ -32,6 +32,7 @@ app.get('/', function(req, res){
    let day = x.getDay();
    first = 1;
    last = 5;
+   console.log(day);
    console.log("Monday:" + x - (day - first));
    console.log("Friday:" + x + (last - day));
    res.send("Hello world!");
