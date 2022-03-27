@@ -27,7 +27,13 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function(req, res){
-   console.log(uuid.v4());
+   //console.log(uuid.v4());
+   let x = new Date();
+   let day = x.getDay();
+   first = 1;
+   last = 5;
+   console.log(x - (day - first));
+   console.log(x + (last - day));
    res.send("Hello world!");
 });
 
