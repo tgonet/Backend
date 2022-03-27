@@ -38,7 +38,7 @@ app.get('/', function(req, res){
    }
    else{
       diff1 = x.getDate() - day + (day == 0 ? -6:1);
-      diff2 = x.getDate() - day + (day == 0 ? -6:5);
+      diff2 = x.getDate() - day + (day == 0 ? -1:5);
       console.log("Monday:" + diff1);
       console.log("Friday:" + diff2);
    }
