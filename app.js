@@ -32,9 +32,16 @@ app.get('/', function(req, res){
    let day = x.getDay();
    first = 1;
    last = 5;
-   console.log(day);
-   console.log("Monday:" + x - (day - first));
-   console.log("Friday:" + x + (last - day));
+   if (day > 5){
+      console.log("Monday:" + x - (day - first));
+      console.log("Friday:" + x + (last - day));
+   }
+   else{
+      diff1 = x.getDate() - day + (day == 0 ? -6:1);
+      diff2 = x.getDate() - day + (day == 0 ? -6:5);
+      console.log("Monday:" + diff1);
+      console.log("Friday:" + diff2);
+   }
    res.send("Hello world!");
 });
 
