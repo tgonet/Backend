@@ -26,8 +26,7 @@ app.use(function(req, res, next){
    next();
 });
 
-app.get('/', function(req, res){
-   //console.log(uuid.v4());
+app.get('/datetest', function(req, res){
    let x = new Date();
    let day = x.getDay();
    first = 1;
@@ -39,10 +38,15 @@ app.get('/', function(req, res){
    else{
       diff1 = x.getDate() - day + (day == 0 ? -6:1);
       diff2 = x.getDate() - day + (day == 0 ? -2:5);
-      console.log("Monday:" + new Date(x.setDate(diff1)));
+      console.log("Monday:" + new Date(x.setDate(diff1).toLocaleString));
       console.log("Friday:" + new Date(x.setDate(diff2)));
    }
-   res.send("Hello world!");
+   res.send("date test")
+});
+
+app.get('/uuid', function(req, res){
+   console.log();
+   res.send(uuid.v4());
 });
 
 app.get('/:id/:type', function(req, res){
