@@ -49,6 +49,10 @@ app.get('/uuid', function(req, res){
    res.send(uuid.v4());
 });
 
+app.get('/', function(req, res){
+   res.send("hello world");
+});
+
 app.get('/:id/:type', function(req, res){
    res.send(req.params.id + " " + req.params.type);
 });
